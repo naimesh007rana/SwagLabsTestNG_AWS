@@ -24,7 +24,7 @@ public class BasePage {
 			options.addArguments("--headless");
 			options.addArguments("--ignore-ssl-errors=yes");
 			options.addArguments("--ignore-certificate-errors");
-			driver = new ChromeDriver(options);
+			driver = new RemoteWebDriver(new URL("http://3.87.30.31:4444"),options);
 
 		driver.get("https://www.saucedemo.com/v1/");
 		driver.manage().window().maximize();
